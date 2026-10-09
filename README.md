@@ -9,7 +9,7 @@
 [English](README_EN.md) · [安装](docs/INSTALL.md) · [真实只读演示](docs/LIVE_DEMO.md) · [MOCK 演示](examples/MOCK_DEMO.md) · [验证记录](docs/VALIDATION.md)
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB)
-![Skill](https://img.shields.io/badge/Codex-Agent_Skill-16A085)
+![Skill](https://img.shields.io/badge/AI-Agent_Skill-16A085)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Safety](https://img.shields.io/badge/Orders-explicit_confirmation-orange)
 
@@ -17,7 +17,7 @@
 
 **告诉 AI 你的健身目标、预算和偏好，让 Python 计算，让麦当劳官方 MCP 验证价格。**
 
-面向希望比较麦当劳餐品营养与花费的健康成人。它是一个可安装的 Codex Skill，包含真正运行的 Python 营养引擎、确定性组合搜索、实时菜单适配与订单确认逻辑，不需要网站或服务器。
+面向希望比较麦当劳餐品营养与花费的健康成人。它是一个可安装的 AI Skill，包含真正运行的 Python 营养引擎、确定性组合搜索、实时菜单适配与订单确认逻辑，不需要网站或服务器。
 
 > 独立开发的第三方开源作品，不代表麦当劳官方立场。一般性饮食辅助，非医疗诊断或治疗工具。真实订单只在用户明确确认后创建；付款由用户本人完成。
 
@@ -75,7 +75,7 @@ macOS + Python 3.11+：从 GitHub **Code → Download ZIP** 下载并解压，�
 
 随后双击 `Setup Token.command`，把在 [官方 MCP 平台](https://open.mcd.cn/mcp) 刚生成的新 Token 填入本机隐藏输入框。旧 Token 如曾泄漏，先在官方控制台撤销。**不要把 Token 发到聊天或写入代码。**
 
-Token 存到 macOS 钥匙串；Codex 通过官方支持的 `http_headers_helper` 按需读取，Python 使用同一凭证。无需让 GUI 继承 Terminal 环境变量，也不会把 `.env` 当作自动生效配置。其他系统可用私密进程环境变量 `MCD_MCP_TOKEN`，见 [完整安装指南](docs/INSTALL.md)。
+Token 存到 macOS 钥匙串，由客户端和 Python 程序按需读取。其他系统的凭证配置和客户端适配见 [完整安装指南](docs/INSTALL.md)。
 
 开发者可执行：
 
@@ -85,7 +85,7 @@ python3 scripts/install.py
 .venv/bin/mcmuscle probe
 ```
 
-项目级 Skill 位于 `.agents/skills/mcmuscle/SKILL.md`。安装完整仓库，单独拷贝 SKILL.md 不够。Codex 若未发现更新，重新打开项目或重启应用。无需 WorkBuddy。
+项目级 Skill 位于 `.agents/skills/mcmuscle/SKILL.md`。安装完整仓库，单独拷贝 SKILL.md 不够。若未发现更新，重新打开项目或重启客户端。
 
 ## 营养方法与指标
 
@@ -125,7 +125,7 @@ python3 scripts/install.py
 ## 项目结构
 
 ```text
-.agents/skills/mcmuscle/  Skill入口、Codex元数据和实时工作流参考
+.agents/skills/mcmuscle/  Skill入口、客户端元数据和实时工作流参考
 src/mcmuscle/            输入、营养、组合优化、MCP、算价、订单与CLI
 scripts/                安装与发布前扫描
 tests/                  无Token自动测试
@@ -139,4 +139,4 @@ docs/                   安装、算法、真实验证与进度
 
 本项目的原创代码采用 [MIT License](LICENSE)。[官方参赛声明](CONTEST_DECLARATION.md) 为官方文件原样复制，其内容和麦当劳数据/商标不受本项目 MIT 授权扩张。
 
-参加 [麦当劳程序员创意开发大赛](https://github.com/M-China/mcd-developer-innovation-challenge)，不申请 WorkBuddy 专项奖励。正式截止北京时间2026-10-25 23:59，报名以官方 Issue 回复为准；仓库发布不等于报名成功。参赛与阶段状态见 [PROGRESS.md](docs/PROGRESS.md)。不购买或操纵 Star。
+参加 [麦当劳程序员创意开发大赛](https://github.com/M-China/mcd-developer-innovation-challenge)。正式截止北京时间2026-10-25 23:59，报名以官方 Issue 回复为准；仓库发布不等于报名成功。参赛与阶段状态见 [PROGRESS.md](docs/PROGRESS.md)。不购买或操纵 Star。

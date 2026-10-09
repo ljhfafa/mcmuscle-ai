@@ -2,7 +2,7 @@
 
 **Fuel Your Gains. Save Your Wallet.**
 
-A runnable Codex Skill that combines McDonald's China official MCP nutrition, current store menus, official price calculation, and deterministic Python meal optimization.
+A runnable AI Skill that combines McDonald's China official MCP nutrition, current store menus, official price calculation, and deterministic Python meal optimization.
 
 [中文](README.md) · [Installation](docs/INSTALL.md) · [Live read-only demo](docs/LIVE_DEMO.md) · [Synthetic demo](examples/MOCK_DEMO.md)
 
@@ -10,7 +10,7 @@ Independent third-party open-source project, not an official McDonald's product 
 
 ## What it does
 
-- Parses natural language through Codex, with a conservative Chinese/English convenience CLI parser and validated structured profiles.
+- Parses natural language through an AI assistant, with a conservative Chinese/English convenience CLI parser and validated structured profiles.
 - Computes estimated resting energy, TDEE, configurable gain/cut/maintenance targets, and separate daily versus meal macros when enough information is provided.
 - Reads official JSON/TOON nutrition, normalizes names/units, rejects missing or conflicting data, and intersects the catalog with a selected store's actual menu.
 - Searches a bounded integer quantity space. Protein Max, Best Protein Value, and Calorie Smart optimize different explicit criteria. Hard budget, exclusion, allergy and nutrient constraints take precedence over preferences.
@@ -31,7 +31,7 @@ python3 scripts/install.py
 .venv/bin/mcmuscle probe
 ```
 
-macOS Codex uses `http_headers_helper`, avoiding GUI environment inheritance problems. Other systems use `MCD_MCP_TOKEN` in the process environment. The JSON example uses a client-dependent placeholder; it is not a universal environment-expansion standard. See [installation and troubleshooting](docs/INSTALL.md).
+The client and Python engine read credentials on demand from macOS Keychain. See [installation and troubleshooting](docs/INSTALL.md) for other systems and client-specific configuration.
 
 The project Skill needs the Python package and references; copying only SKILL.md does not install the application.
 
@@ -61,4 +61,4 @@ No applicable owned coupons were returned in the test account. Delivery addresse
 
 Tests block network access and do not require tokens. CI never creates orders. Personal profiles, addresses, coupons, tokens, and raw account responses must stay outside Git in `private/`. Demo fixtures are clearly labeled **MOCK DEMO**.
 
-MIT applies to original code; official contest declaration, third-party data and trademarks retain their rights. Original official declaration is copied unchanged. This entry does not participate in WorkBuddy bonuses. Publication alone does not establish contest registration: only an explicit official success reply does. See [progress](docs/PROGRESS.md).
+MIT applies to original code; official contest declaration, third-party data and trademarks retain their rights. Original official declaration is copied unchanged. Publication alone does not establish contest registration: only an explicit official success reply does. See [progress](docs/PROGRESS.md).
