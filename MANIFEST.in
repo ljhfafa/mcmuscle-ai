@@ -7,3 +7,6 @@ recursive-include scripts *.py
 prune private
 prune .codex
 prune .venv
+
+include .gitignore
+recursive-include .github *.yml

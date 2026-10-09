@@ -4,6 +4,7 @@ Unsupported list-object forms fail closed rather than inventing nutrition.
 
 import json
 import re
+from typing import Any
 
 
 class FormatError(ValueError):
@@ -51,7 +52,7 @@ def toon(text: str):
     lines = [x.rstrip() for x in text.splitlines() if x.strip()]
 
     def block(pos, indent):
-        out = {}
+        out: dict[str, Any] = {}
         while pos < len(lines):
             line = lines[pos]
             depth = len(line) - len(line.lstrip(" "))

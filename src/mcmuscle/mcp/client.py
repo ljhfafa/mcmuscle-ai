@@ -132,7 +132,9 @@ class Gateway:
                     raise MCPFailure("只读 MCP 请求失败；请检查网络、权限或接口状态") from None
                 delay = 2**attempt
                 try:
-                    delay = min(60, max(delay, float(e.response.headers.get("Retry-After", 0))))
+                    response = getattr(e, "response", None)
+                    if response is not None:
+                        delay = min(60, max(delay, float(response.headers.get("Retry-After", 0))))
                 except (AttributeError, ValueError):
                     pass
                 await self.sleep(delay)
