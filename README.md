@@ -135,6 +135,8 @@ docs/                   安装、算法、真实验证与进度
 
 ## 开源与参赛
 
+**报名 Issue 已提交，等待官方审核：[官方比赛 #39](https://github.com/M-China/mcd-developer-innovation-challenge/issues/39)。**
+
 本项目的原创代码采用 [MIT License](LICENSE)。[官方参赛声明](CONTEST_DECLARATION.md) 为官方文件原样复制，其内容和麦当劳数据/商标不受本项目 MIT 授权扩张。
 
 参加 [麦当劳程序员创意开发大赛](https://github.com/M-China/mcd-developer-innovation-challenge)，不申请 WorkBuddy 专项奖励。正式截止北京时间2026-10-25 23:59，报名以官方 Issue 回复为准；仓库发布不等于报名成功。参赛与阶段状态见 [PROGRESS.md](docs/PROGRESS.md)。不购买或操纵 Star。

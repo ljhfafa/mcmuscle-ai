@@ -19,10 +19,10 @@
 |13 Codex触发运行|通过离线实测|非仅格式验证|
 |14 README与参赛文件|完成|中英文、真实和Mock演示|
 |15 质量与密钥检查|通过|93项测试、Ruff/mypy、依赖审计与源码扫描|
-|16 创建GitHub仓库|待执行|目标ljhfafa/mcmuscle-ai，Public|
-|17 上传项目|待执行|本地完成后实际推送|
-|18 报名Issue|待执行|使用官方正式格式|
-|19 官方结果核对|待执行|只有官方明确回复成功才算报名成功|
+|16 创建GitHub仓库|完成|https://github.com/ljhfafa/mcmuscle-ai，个人账号，Public|
+|17 上传项目|完成并验证|Git网络故障后通过官方API发布；57个文件逐一哈希比对通过|
+|18 报名Issue|已提交|https://github.com/M-China/mcd-developer-innovation-challenge/issues/39|
+|19 官方结果核对|等待官方审核|2026-10-09 16:44 北京时间查询暂无回复，不声称报名成功|
 
 ## 规则核验
 
@@ -37,3 +37,5 @@
 ## 维护待办
 
 有可用券时只读测试折扣报价；补充官方完整过敏信息（若可获取）；更多套餐组件适配。真实订单只在用户确有用餐需求并明确确认后执行，不为了测试下单。
+
+GitHub CI：Python 3.11/3.12/3.13全部通过。运行证据：https://github.com/ljhfafa/mcmuscle-ai/actions/runs/37906272772 。仓库创建时间2026-10-09 16:27:46北京时间，符合规则窗口。

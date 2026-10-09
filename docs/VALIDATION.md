@@ -37,3 +37,5 @@
 原始响应、运行日志、账号信息保留于发布目录外的私密工作区，不上传GitHub。公开演示只包含餐品数据和虚构测试画像。
 
 Codex原生MCP调用复验：2026-10-09 16:29:51，北京时间，经正常自动审批后直接调用mcd.list-nutrition-foods成功，返回160行，0副作用。初次never审批模式阻止调用，未绕过审批，改用正常审批流程后通过。
+
+GitHub Linux CI在Python3.11、3.12、3.13全部通过测试、Ruff、严格mypy、源码/历史扫描和依赖审计：[运行37906272772](https://github.com/ljhfafa/mcmuscle-ai/actions/runs/37906272772)。首轮严格mypy发现三处类型问题，已修复并复验。
