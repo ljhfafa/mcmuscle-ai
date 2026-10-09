@@ -1,0 +1,13 @@
+interface:
+  display_name: "麦麦肌肉大王 McMuscle AI"
+  short_description: "结合官方营养、实时门店菜单与优惠券，为健身人群计算高蛋白省钱套餐"
+  default_prompt: "使用 $mcmuscle，按我的目标和预算推荐一顿麦当劳，先展示营养与官方算价。"
+policy:
+  allow_implicit_invocation: true
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mcd"
+      description: "麦当劳中国官方 MCP"
+      transport: "streamable_http"
+      url: "https://mcp.mcd.cn"

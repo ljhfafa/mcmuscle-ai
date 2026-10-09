@@ -1,0 +1,4 @@
+{
+  "goal": "gain", "weight_kg": 75, "budget": 40,
+  "likes": ["beef"], "excludes": ["fish"], "allergies": []
+}

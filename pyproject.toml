@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcmuscle-ai"
+version = "0.1.0"
+description = "Explainable nutrition and budget optimization for McDonald's China MCP"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["pydantic>=2.11,<3"]
+
+[project.optional-dependencies]
+live = ["mcp>=1.20,<2", "jsonschema>=4.23,<5", "keyring>=25,<26"]
+dev = ["pytest>=8,<10", "pytest-cov>=6,<8", "ruff>=0.11", "mypy>=1.15", "pip-audit>=2.9", "build>=1.2", "pyyaml>=6"]
+
+[project.scripts]
+mcmuscle = "mcmuscle.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+check_untyped_defs = true
